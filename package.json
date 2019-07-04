@@ -4,7 +4,9 @@
   "license": "MIT",
   "main": "lib/nightmare.js",
   "scripts": {
-    "test": "make test"
+    "test": "make test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -29,7 +31,8 @@
     "once": "^1.3.3",
     "rimraf": "^2.4.3",
     "sliced": "1.0.1",
-    "split2": "^2.0.1"
+    "split2": "^2.0.1",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "basic-auth": "^1.0.3",
@@ -45,6 +48,7 @@
     "split": "^1.0.0"
   },
   "engines": {
-    "node":">=4.0.0"
-  }
+    "node": ">=4.0.0"
+  },
+  "snyk": true
 }
